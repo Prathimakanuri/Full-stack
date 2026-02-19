@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tilted Background</title>
+<style>
+body {
+    margin: 0;
+    height: 200vh; /* for scrolling */
+    position: relative;
+}
+
+/* CSS rule for tilted fixed background */
+body::before {
+    content: "";
+    position: fixed;                 /* stays during scroll */
+    top: 50%;                        /* halfway down page */
+    left: 50%;
+    width: 300px;
+    height: 200px;
+
+    background: url("/home/vitcse/Downloads/parachute.jpg") no-repeat center/cover;
+
+    transform: translate(-50%,-50%) skewX(15deg);         /* horizontal tilt */
+    transform-origin: center;
+
+    z-index: -1;                     /* behind content */
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center; margin-top:40vh;">
+Scroll the page — image stays fixed and tilted
+</h2>
+
+</body>
+</html>
